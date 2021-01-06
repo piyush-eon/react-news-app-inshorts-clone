@@ -20,7 +20,7 @@ function App() {
     const url = `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`;
     const request = new Request(url);
 
-    fetch(request)
+    await fetch(request)
       .then((response) => response.json())
       .then((news) => {
         console.log(news);
