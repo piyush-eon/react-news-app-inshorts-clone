@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
@@ -13,12 +13,23 @@ function App() {
   const [category, setCategory] = useState("general");
 
   const newsApi = async () => {
-    const news = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`
-    );
-    console.log(news.data);
-    setNewsArray(news.data.articles);
-    setNewsResults(news.data.totalResults);
+    // const news = await axios.get(``);
+
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+    const url = `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`;
+    const request = new Request(url);
+
+    fetch(request)
+      .then((response) => response.json())
+      .then((news) => {
+        console.log(news);
+        setNewsArray(news.articles);
+        setNewsResults(news.totalResults);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
