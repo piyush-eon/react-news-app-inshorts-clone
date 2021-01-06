@@ -14,7 +14,7 @@ function App() {
 
   const newsApi = async () => {
     const news = await axios.get(
-      `http://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`
     );
     console.log(news.data);
     setNewsArray(news.data.articles);
