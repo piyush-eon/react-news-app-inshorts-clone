@@ -42,7 +42,7 @@ const NewsCard = ({ newsItem }) => {
           <div className="description">{newsItem.description}</div>
           <span className="readmore">
             read more at{" "}
-            <a href={newsItem.url} target="__blank">
+            <a href={newsItem.url} target="__blank" className="source">
               <b>{newsItem.source.name}</b>
             </a>
           </span>

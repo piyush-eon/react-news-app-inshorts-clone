@@ -10,8 +10,9 @@
   padding: 20px 30px 15px;
   color: white;
 }
+
 a {
-  color: white !important;
+  color: white;
 }
 
 .iconContainer {

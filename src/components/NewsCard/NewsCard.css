@@ -38,6 +38,11 @@
   padding-top: 10px;
 }
 
+.source {
+  text-decoration: none;
+  color: black;
+}
+
 .newsImage {
   object-fit: cover;
   width: 320px;
