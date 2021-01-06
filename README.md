@@ -21,7 +21,7 @@ Here is a working live demo :  https://inshortsclone.herokuapp.com/
 
 ### Choose from different Categories
 
-![](hhttps://github.com/piyush-eon/react-news-app-inshorts-clone/blob/master/public/2.png)
+![](https://github.com/piyush-eon/react-news-app-inshorts-clone/blob/master/public/2.png)
 
 ## Built with 
 
