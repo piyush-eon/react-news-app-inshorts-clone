@@ -4,6 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import NavInshort from "./components/NavInshort";
 import NewsContent from "./components/NewsContent/NewsContent";
+import apikey from "../config";
 
 function App() {
   const [newsArray, setNewsArray] = useState([]);
@@ -13,7 +14,7 @@ function App() {
 
   const newsApi = async () => {
     const news = await axios.get(
-      `http://newsapi.org/v2/top-headlines?country=in&apiKey=3bea0ded0d3b4319922a2b1d6a934aa0&pageSize=${loadMore}&category=${category}`
+      `http://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`
     );
     console.log(news.data);
     setNewsArray(news.data.articles);
