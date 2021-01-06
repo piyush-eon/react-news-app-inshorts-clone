@@ -19,8 +19,12 @@ function App() {
 
     const url = `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&pageSize=${loadMore}&category=${category}`;
     const request = new Request(url);
-
-    await fetch(request)
+    console.log(request);
+    await fetch(request, {
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+      },
+    })
       .then((response) => response.json())
       .then((news) => {
         console.log(news);
