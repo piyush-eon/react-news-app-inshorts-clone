@@ -26,7 +26,7 @@ function App() {
   }, [newsResults, loadMore, category]);
 
   return (
-    <div className="App">
+    <div className="App" id="#home">
       <NavInshort setCategory={setCategory} />
       {newsResults && (
         <NewsContent
