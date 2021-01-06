@@ -10,7 +10,7 @@
 
 
 ## Demo
-Here is a working live demo :  https://inshortsclone.herokuapp.com/
+Here is a working live demo :  https://react-inshorts.netlify.app
 
 
 ## Site
