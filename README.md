@@ -8,6 +8,9 @@
 </tr>
 </table>
 
+## Important Note
+News api doesn't allow you to fetch the api from a deployed site. You can fork this repo and run in your local server and add your apikey in config.js file in the root.
+
 ## Demo
 Here is a working live demo : https://piyush-eon.github.io/react-news-app-inshorts-clone/
 
