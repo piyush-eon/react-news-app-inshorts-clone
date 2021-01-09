@@ -25,6 +25,9 @@
     display: none;
   }
 }
+
+/* --------------------------------------------------- */
+
 .loadMore {
   cursor: pointer;
   background-color: white;

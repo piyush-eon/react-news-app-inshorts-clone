@@ -4,11 +4,12 @@ import "./NewsCard.css";
 const NewsCard = ({ newsItem }) => {
   // console.log(newsItem);
 
-  const fulldate = new Date(newsItem.publishedAt);
-
-  var date = fulldate.toString().split(" ");
-  const hour = parseInt(date[4].substring(0, 3));
-  const time = hour > 12 ? true : false;
+  //2021-01-09T12:15:30Z
+  const fulldate = new Date(newsItem.publishedAt); // Sat  Jan 09 2021  17:45:30  GMT+0530
+  var date = fulldate.toString().split(" "); // ["Sat", "Jan", "09", "2021", "17:45:30", "GMT+0530"]
+  const hour = parseInt(date[4].substring(0, 2)); //
+  console.log(hour);
+  const time = hour > 12 ? true : false; // checking if its more than 12 pm
 
   return (
     <div className="newsCard">

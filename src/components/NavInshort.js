@@ -1,5 +1,5 @@
 import React from "react";
-import "./nav.css";
+import "./NavInshort.css";
 import HamburgerDrawer from "./HamburgerDrawer";
 
 const NavInshort = ({ setCategory }) => {

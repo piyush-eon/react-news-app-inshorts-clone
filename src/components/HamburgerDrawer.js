@@ -10,20 +10,21 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 // import InboxIcon from "@material-ui/icons/MoveToInbox";
 // import MailIcon from "@material-ui/icons/Mail";
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@material-ui/icons/Menu"; // added
+
 import {
   createMuiTheme,
   ThemeProvider,
   useMediaQuery,
-} from "@material-ui/core";
+} from "@material-ui/core"; // added
 
 import categories from "../data/category";
 
 const useStyles = makeStyles({
   list: {
     width: 200, // changed
-    paddingLeft: 10,
-    paddingRight: 5,
+    paddingLeft: 10, // changed
+    paddingRight: 5, //changed
   },
   fullList: {
     width: "auto",
@@ -93,6 +94,7 @@ export default function SwipeableTemporaryDrawer({ setCategory }) {
   return (
     <div>
       <Button onClick={toggleDrawer("left", true)}>
+        {/* added icon */}
         <MenuIcon />
       </Button>
       {/* added */}
