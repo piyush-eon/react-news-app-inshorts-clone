@@ -8,8 +8,7 @@ const NewsCard = ({ newsItem }) => {
   const fulldate = new Date(newsItem.publishedAt); // Sat  Jan 09 2021  17:45:30  GMT+0530
   var date = fulldate.toString().split(" "); // ["Sat", "Jan", "09", "2021", "17:45:30", "GMT+0530"]
   const hour = parseInt(date[4].substring(0, 2)); //
-  console.log(hour);
-  const time = hour > 12 ? true : false; // checking if its more than 12 pm
+  const time = hour > 12 ? true : false;
 
   return (
     <div className="newsCard">
